@@ -5,7 +5,7 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://JustinDMoore:Ju$tin!1@ds015892.mlab.com:15892/corpsboard';
+var databaseUri = 'mongodb://JustinDMoore:Ju$tin!1@ds013222.mlab.com:13222/corpboard';
 
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
@@ -18,12 +18,6 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || 'ghQaWz8I6ufa4jd5ZEN3W6kTAOXMSBCt6r9k7gKt', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   fileKey: '57edad47-342b-49b5-97c5-bd384b2b8c46',
-  filesAdapter: new S3Adapter(
-    "AKIAJHHHUJV7P4VXDDPQ",
-    "7Y0Czz4lL5el3hhxUutMHDCRMosDFJB4Tg7rXweG",
-    "corpsboard",
-    {directAccess: true}
-  ),
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
