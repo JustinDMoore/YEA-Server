@@ -5,7 +5,7 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://JustinDMoore:Ju$tin!1@ds013222.mlab.com:13222/corpboard';
+var databaseUri = 'mongodb://JustinDMoore:Ju$tin!1@ds011345-a0.mlab.com:11345,ds011345-a1.mlab.com:11345/corpsboard?replicaSet=rs-ds011345';
 
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
